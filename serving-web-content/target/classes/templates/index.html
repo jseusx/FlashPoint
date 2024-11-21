@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>FlashPoint</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <div class="taskbar-left">
+            <a href="/knowledge-tower" class="taskbar-link">Knowledge Tower</a>
+            <a href="/memory-match" class="taskbar-link">Memory Match</a>
+        </div>
+        <div class="taskbar-right">
+            <!-- Login button -->
+            <a th:if="${!loggedIn}" href="/login" class="login-button">Login</a>
+
+            <!-- Logout button -->
+            <a th:if="${loggedIn}" href="/logout" class="login-button">Logout</a>
+        </div>
+    </div>
+
+    <!-- Display message if logged in -->
+    <div th:if="${loggedIn}" class="logged-out-message">
+        <p>Welcome, <span th:text="${currentUser}"></span>! You are currently logged in.</p>
+    </div>
+
+    <!-- Display message if not logged in -->
+    <div th:if="${!loggedIn}" class="logged-out-message">
+        <p>Please log in to view your flashcards</p>
+    </div>
+
+    <!-- Center wrapper for topics -->
+    <div th:if="${loggedIn}" class="center-wrapper">
+        <!-- Container for topics -->
+        <div class="topics-container">
+            <!-- Loop through each subject and create a topic square -->
+            <a th:each="subject : ${subjects}" th:href="@{/result(subject=${subject})}" class="topic-square">
+                <div>
+                    <span th:text="${subject}">Sample Subject</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- 
+    <h2>Upload a text file:</h2>
+    <p th:text="${message}"></p>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file">Choose a .txt file:</label>
+        <input type="file" id="file" name="file" accept=".txt" required>
+        <input type="submit" value="Upload">
+    </form>
+
+    <form action="/add" method="post">
+        <label for="topic">Enter the Topic:</label>
+        <input type="text" id="topic" name="topic">
+        <label for="description">Enter the description:</label>
+        <input type="text" id="description" name="description">
+        <input type="submit" value="Add">
+    </form>
+-->
+
+    <!-- <form action="/submit" method="post">
+        <input type="submit" value="Submit">
+    </form> -->
+
+</body>
+
+</html>

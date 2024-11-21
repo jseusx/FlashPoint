@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>FlashPoint</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <form action="/create_account" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="password_2">Re-type Password:</label>
+        <input type="password" id="password_2" name="password_2" required><br><br>
+
+        <button type="submit">Create Account</button>
+    </form>
+
+    <div th:if="${error_message}">
+        <p th:text="${error_message}"></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title th:text="${subject} + ' Flashcards'">Flashcards</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <div class="taskbar-left">
+            <a href="/" class="taskbar-link">Home</a>
+            <a href="/knowledge-tower" class="taskbar-link">Knowledge Tower</a>
+            <a href="/memory-match" class="taskbar-link">Memory Match</a>
+        </div>
+        <div class="taskbar-right">
+            <!-- Login button -->
+            <a th:if="${!loggedIn}" href="/login" class="login-button">Login</a>
+
+            <!-- Logout button -->
+            <a th:if="${loggedIn}" href="/logout" class="login-button">Logout</a>
+        </div>
+    </div>
+
+    <!-- Add Flashcard Button -->
+    <div class="add-flashcard-wrapper">
+        <a th:href="@{/add-flashcard(subject=${subject})}" class="add-flashcard-button">+ Add Flashcard</a>
+    </div>
+
+    <h2 th:text="'Details for ' + ${subject}" class="text-subject"></h2>
+
+    <div th:if="${edit_message}" class="edit-message">
+        <p th:text="${edit_message}"></p>
+    </div>
+
+    <div class="flashcard-wrapper">
+        <div th:if="${flashcards}" class="flashcards-container">
+            <!-- Loop through each flashcard and display it as a card similar to the topics-container -->
+            <div th:each="flashcard : ${flashcards}" onclick="toggleFlip(this)" class="flashcard-container">
+                <div class="flashcard">
+                    <div class="flashcard-front">
+                        <!--Edit flashcard button-->
+                        <a th:href="@{/edit(id=${flashcard.id}, subject=${subject})}" class="edit-button">✎</a>
+                        <!--Delete flashcard button-->
+                        <!--<a 
+                        class="delete-button" 
+                        th:data-id="${flashcard.id}"
+                        th:data-subject="${subject}"
+                        onclick="deleteFlashcard(this, event)">
+                        −
+                        </a>-->
+                        <form
+                        th:action="@{/delete-flashcard}" 
+                        method="post"
+                        onsubmit="return confirm('Are you sure you want to delete this flashcard?');"
+                        class="delete-form">
+                        <input type="hidden" name="id" th:value="${flashcard.id}" />
+                        <input type="hidden" name="subject" th:value="${subject}" />
+                        <button type="submit" class="delete-button">−</button>
+                        </form>
+
+
+                        <span th:text="${flashcard.topic}">Topic</span>
+                    </div>
+                    <div class="flashcard-back">
+                        <span th:text="${flashcard.description}">Description</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <div th:if="${flashcards == null}">
+        <p>No flashcards available for this subject.</p>
+    </div>
+
+    <script>
+        function toggleFlip(cardContainer) {
+            // Check if the click target is not one of the buttons
+            if (!event.target.classList.contains('edit-button') && !event.target.classList.contains('delete-button')) {
+                const flashcard = cardContainer.querySelector('.flashcard');
+                flashcard.classList.toggle('flipped');
+            }
+        }
+
+        function deleteFlashcard(element, event) {
+            event.preventDefault();
+
+            const id = element.getAttribute("data-id");
+            const subject = element.getAttribute("data-subject");
+
+            // Display confirmation dialog
+            const confirmation = window.confirm("Are you sure you want to delete this flashcard?");
+
+            if (confirmation) {
+                console.log("id ", id);
+                console.log("subject ", subject);
+
+                const url = `/delete-flashcard?id=${encodeURIComponent(id)}&subject=${encodeURIComponent(subject)}`;
+                console.log("Request URL:", url); // Debug: Check URL
+
+                fetch(url, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Optionally, remove the flashcard from the DOM or reload the page
+                        console.log("Flashcard deleted successfully");
+                        location.reload(); // Reloads the page
+                    } else {
+                        alert("Failed to delete flashcard");
+                    }
+                })
+                .catch(error => {
+                    console.error("Error deleting flashcard:", error);
+                    alert("An error occurred");
+                });
+            } else {
+                console.log("Deletion canceled.");
+            }
+        }
+
+    </script>
+</body>
+</html>
