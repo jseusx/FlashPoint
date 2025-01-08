@@ -12,7 +12,6 @@ This project was built using the following technologies:
 - CSS
 
 ## How to setup:
-Using vscode, download the folder titled "serving-web-content". This will be the folder you will open in vscode, it will look similar to this once opened up:
-![Image of sidebar from VSCODE](page_images/vscode serving.png)
-> [!Tip]
-> Before downloading repo, make sure all springboot extensions in vscode are downloaded. 
+Using vscode, download the folder titled "serving-web-content". This will be the folder you will open in vscode, it will look similar to this once opened up: <br>
+![Image of sidebar from VSCODE](/page_images/vscode%20serving.png)
+From here, you will want to download all the springboot extensions, specifically the **Spring Boot Extension Pack**.
