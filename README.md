@@ -1,3 +1,7 @@
 # FlashPoint
 A free alternative for viewing and creating flashcards.<br>
-At the moment this README file is a placeholder for when this project is completed. This was a collaborative project. I was in charge of all Spring Boot implementations and frontend development. 
+This was a collaborative project. I was in charge of handling implementations of code handed in from the group and editing to make use of Springboot. <br>
+## How to setup:
+Using vscode, download the folder titled "serving-web-content". This will be the folder you will open in vscode.
+> [!Tip]
+> Before downloading repo, make sure all springboot extensions in vscode are downloaded. 
