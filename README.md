@@ -46,8 +46,9 @@ To **add** a subject, you can click "Add Subject" the page will then update and 
 ![Edit subject page](/page_images/Edit_Subject_Page.png) <br>
 Here, the inside the text box will show what is currently the subject. You can either edit it or leave it how it is then click "Submit." <br>
 To **add** a flashcard, you can click "Add Flashcard" the page will update and show:
-![Edit flashcard page](/page_images/Editing_flashcards_page.png) <br>
+![Edit flashcard page](/page_images/Editing_flashcard_page.png) <br>
 Here, each textbox will show what is currently in the topic or description for the flashcard. You can either edit it or leave it and click "Submit" once you are done. The page will then update and showcase your new (or same) flashcard.
+
 ## Flashcards
 To view the flashcards under a subject, just click the subject card and a list of flashcards will be shown if any have been created. <br>
 ![flashcards page](/page_images/flashcards_page.png) <br>
