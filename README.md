@@ -38,14 +38,16 @@ Once the account is created, you will not have any subjects or flashcards to vie
 Once you are logged in you will be presented with a list of flashcard subjects. If you do not have any, you can create some using the "Add Subject" button. <br>
 ![Viewing subjects page](/page_images/Main_Page.png) <br>
 
-### Adding, Editing, and Deleting Subjects
+### Adding, Editing, and Deleting Subjects/flashcards
 Whenever you are looking at a subject, there are two buttons, <br>
 - **-** button will delete a subject with a warning beforehand. <br>
-- **✎** button will allow you to edit the subject.
+- **✎** button will allow you to edit the subject.<br>
 To **add** a subject, you can click "Add Subject" the page will then update and show:
 ![Edit subject page](/page_images/Edit_Subject_Page.png) <br>
-Here, the inside the text box will show what is currently the subject. You can either edit it or leave it how it is then click "Submit."
-
+Here, the inside the text box will show what is currently the subject. You can either edit it or leave it how it is then click "Submit." <br>
+To **add** a flashcard, you can click "Add Flashcard" the page will update and show:
+![Edit flashcard page](/page_images/Editing_flashcards_page.png) <br>
+Here, each textbox will show what is currently in the topic or description for the flashcard. You can either edit it or leave it and click "Submit" once you are done. The page will then update and showcase your new (or same) flashcard.
 ## Flashcards
 To view the flashcards under a subject, just click the subject card and a list of flashcards will be shown if any have been created. <br>
 ![flashcards page](/page_images/flashcards_page.png) <br>
