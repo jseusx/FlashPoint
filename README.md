@@ -19,5 +19,5 @@ Once that is all setup, you may start the project from the "Spring Boot Dashboar
 
 ## What can you do?
 Initially, you will be greeted with a blank page saying for you to login. By clicking the login button, you will then be shown a login page: <br>
-![Login page](/page_images/Login_page.png) <br>
+![Login page](/page_images/Login_Page.png) <br>
 
