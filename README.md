@@ -12,10 +12,10 @@ This project was built using the following technologies:
 - CSS
 
 # How to setup:
-Using vscode, download the folder titled "serving-web-content". This will be the folder you will open in vscode, it will look similar to this once opened up: <br>
+Using vscode, download the folder titled "serving-web-content." This will be the folder you will open in vscode, it will look similar to this once opened up: <br>
 ![Image of sidebar from VSCODE](/page_images/vscode_serving.png) <br>
 From here, you will want to download all the springboot extensions, specifically the **Spring Boot Extension Pack**. You will also need Gradle or any other build system you prefer to run with Spring. <br>
-Once that is all setup, you may start the project from the "Spring Boot Dashboard". On startup, you may navigate to: **http://localhost:8080**
+Once that is all setup, you may start the project from the "Spring Boot Dashboard." On startup, you may navigate to: **http://localhost:8080**
 
 # What can you do?
 ## Login
@@ -44,5 +44,7 @@ Whenever you are looking at a subject, there are two buttons, <br>
 - **✎** button will allow you to edit the subject.
 To **add** a subject, you can click "Add Subject" the page will then update and show:
 ![Edit subject page](/page_images/Edit_Subject_Page.png) <br>
-Here, the inside the text box will show what is currently the subject. You can either edit it or leave it how it is then click "submit"
+Here, the inside the text box will show what is currently the subject. You can either edit it or leave it how it is then click "Submit."
 
+## Flashcards
+To view the flashcards under a subject, just click the subject card and a list of flashcards will be shown if any have been created. <br>
