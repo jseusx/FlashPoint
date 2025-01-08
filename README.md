@@ -60,5 +60,8 @@ Whenever you are viewing a subject, the taskbar will contain 2 games. "Knowledge
 ### Knowledge Tower
 Here is what the Knowledge Tower will look like:<br>
 ![Knowledge Tower](/page_images/Knowledge_Tower_page.png) <br>
-Flaschards are randomized and as you answer correctly, you will gain blocks. After 3 incorrect tries the tower will fall over. Additionally, your highest score will be stored per flashcard set so you can continue improving per set. The more cards you have, the better the experience, as it will make it more difficult on you to remember and learn every card.
-![Blocks](/page_images/KT_blocks.png)
+Flaschards are randomized and as you answer correctly, you will gain blocks. After 3 incorrect tries the tower will fall over. Additionally, your highest score will be stored per flashcard set so you can continue improving in each set. The more cards you have, the better the experience, as it will make it more difficult on you to remember and learn every card.
+> [!NOTE]
+> An XP system was being added, at the moment, it has not been completed as I wanted it to fully save as ranks and XP were unique to a set.
+![Blocks](/page_images/KT_blocks.png) <br>
+
