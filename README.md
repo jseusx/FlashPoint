@@ -18,14 +18,23 @@ From here, you will want to download all the springboot extensions, specifically
 Once that is all setup, you may start the project from the "Spring Boot Dashboard". On startup, you may navigate to: **http://localhost:8080**
 
 ## What can you do?
+### Login
 Initially, you will be greeted with a blank page saying for you to login. By clicking the login button, you will then be shown a login page: <br>
 ![Login page](/page_images/Login_Page.png) <br>
 
 > [!Note]
 > If you wish to use the admin account, instead of creating an account you may skip this section.
 
+### Creating an account
 By clicking the create account button, you will be taken to this page: <br>
 ![Create account page](/page_images/Create_Account_Page.png) <br>
-There are certain criterias needed when creating a password/username, if they are not met or interfere with current accounts, you will have a warning pop up.
+There are certain criterias needed when creating a password/username, if they are not met or interfere with current accounts, you will have a warning pop up. <br>
+Once the account is created, you will not have any subjects or flashcards to view and will need to create them manually.
+
+### Subjects
+Once you are logged in you will be presented with a list of flashcard subjects. If you do not have any, you can create some using the "Add Subject" button. <br>
+![Viewing subjects page](/page_images/Main_Page.png) <br>
+
+
 
 
