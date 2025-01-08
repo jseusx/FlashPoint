@@ -48,4 +48,5 @@ Here, the inside the text box will show what is currently the subject. You can e
 
 ## Flashcards
 To view the flashcards under a subject, just click the subject card and a list of flashcards will be shown if any have been created. <br>
-![flashcards page](/page_images/flashcards_page)
+![flashcards page](/page_images/flashcards_page.png) <br>
+From here, you can click on each card to flip them, a small animation will play showing the description/the back of the card. 
