@@ -63,5 +63,11 @@ Here is what the Knowledge Tower will look like:<br>
 Flaschards are randomized and as you answer correctly, you will gain blocks. After 3 incorrect tries the tower will fall over. Additionally, your highest score will be stored per flashcard set so you can continue improving in each set. The more cards you have, the better the experience, as it will make it more difficult on you to remember and learn every card.
 > [!NOTE]
 > An XP system was being added, at the moment, it has not been completed as I wanted it to fully save as ranks and XP were unique to a set.
+<br>
 ![Blocks](/page_images/KT_blocks.png) <br>
+
+# How everything is saved
+In the begininng of this project, I did not have knowledge in using a database to store data. As a result, a simple txt file was used and formatted to be read and written to. <br>
+Whenever any change is made, whether it be an account is made, a card is deleted or editted, or a new highscore is met, the file will be updated. Using Spring Boot requests are sent to the txt file to update it.<br>
+On **Startup** the txt file is loaded and read and using GET/POST methods all functions can be properly done in the most efficient way.
 
