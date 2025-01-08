@@ -71,3 +71,8 @@ In the begininng of this project, I did not have knowledge in using a database t
 Whenever any change is made, whether it be an account is made, a card is deleted or editted, or a new highscore is met, the file will be updated. Using Spring Boot requests are sent to the txt file to update it.<br>
 On **Startup** the txt file is loaded and read and using GET/POST methods all functions can be properly done in the most efficient way.
 
+# Future Additions
+- Complete xp system
+- Complete profile system
+  - Will display achievements per subject
+- Add a drag and drop matching game
