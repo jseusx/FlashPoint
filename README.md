@@ -45,13 +45,20 @@ From here, you can click on each card to flip them, a small animation will play 
 ![flipped flashcard](/page_images/flipped_flashcard.png) <br>
 
 ### Adding, Editing, and Deleting Subjects/flashcards
-Whenever you are looking at a subject, there are two buttons, <br>
-- **-** button will delete a subject with a warning beforehand. <br>
-- **✎** button will allow you to edit the subject.<br>
+Whenever you are looking at a subject or flashcard, there are two buttons, <br>
+- **-** button will delete a card with a warning beforehand. <br>
+- **✎** button will allow you to edit the card.<br>
 To **add** a subject, you can click "Add Subject" the page will then update and show:
 ![Edit subject page](/page_images/Edit_Subject_Page.png) <br>
-Here, the inside the text box will show what is currently the subject. You can either edit it or leave it how it is then click "Submit." <br>
+Here, the inside the text box will show what is currently the subject. You can either edit it or leave it how it is then click "Submit." <br> <br>
 To **add** a flashcard, you can click "Add Flashcard" the page will update and show:
 ![Edit flashcard page](/page_images/Editing_flashcard_page.png) <br>
 Here, each textbox will show what is currently in the topic or description for the flashcard. You can either edit it or leave it and click "Submit" once you are done. The page will then update and showcase your new (or same) flashcard.
 
+## Games
+Whenever you are viewing a subject, the taskbar will contain 2 games. "Knowledge Tower" and "Memory Match." Each game uses your current flashcards to help you study. <br>
+### Knowledge Tower
+Here is what the Knowledge Tower will look like:<br>
+![Knowledge Tower](/page_images/Knowledge_Tower_page.png) <br>
+Flaschards are randomized and as you answer correctly, you will gain blocks. After 3 incorrect tries the tower will fall over. Additionally, your highest score will be stored per flashcard set so you can continue improving per set. The more cards you have, the better the experience, as it will make it more difficult on you to remember and learn every card.
+![Blocks](/page_images/KT_blocks.png)
