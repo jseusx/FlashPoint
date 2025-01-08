@@ -38,6 +38,12 @@ Once the account is created, you will not have any subjects or flashcards to vie
 Once you are logged in you will be presented with a list of flashcard subjects. If you do not have any, you can create some using the "Add Subject" button. <br>
 ![Viewing subjects page](/page_images/Main_Page.png) <br>
 
+## Flashcards
+To view the flashcards under a subject, just click the subject card and a list of flashcards will be shown if any have been created. <br>
+![flashcards page](/page_images/flashcards_page.png) <br>
+From here, you can click on each card to flip them, a small animation will play showing the description/the back of the card. <br>
+![flipped flashcard](/page_images/flipped_flashcard.png) <br>
+
 ### Adding, Editing, and Deleting Subjects/flashcards
 Whenever you are looking at a subject, there are two buttons, <br>
 - **-** button will delete a subject with a warning beforehand. <br>
@@ -49,8 +55,3 @@ To **add** a flashcard, you can click "Add Flashcard" the page will update and s
 ![Edit flashcard page](/page_images/Editing_flashcard_page.png) <br>
 Here, each textbox will show what is currently in the topic or description for the flashcard. You can either edit it or leave it and click "Submit" once you are done. The page will then update and showcase your new (or same) flashcard.
 
-## Flashcards
-To view the flashcards under a subject, just click the subject card and a list of flashcards will be shown if any have been created. <br>
-![flashcards page](/page_images/flashcards_page.png) <br>
-From here, you can click on each card to flip them, a small animation will play showing the description/the back of the card. <br>
-![flipped flashcard](/page_images/flipped_flashcard.png) <br>
