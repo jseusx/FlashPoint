@@ -25,7 +25,7 @@ Initially, you will be greeted with a blank page saying for you to login. By cli
 > [!Note]
 > If you wish to use the admin account, instead of creating an account you may skip this section.
 > The username and pass for the admin account is as follows:
-> Username: admin
+> <br>Username: admin<br>
 > Password: pass
 
 ## Creating an account
