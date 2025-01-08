@@ -21,3 +21,11 @@ Once that is all setup, you may start the project from the "Spring Boot Dashboar
 Initially, you will be greeted with a blank page saying for you to login. By clicking the login button, you will then be shown a login page: <br>
 ![Login page](/page_images/Login_Page.png) <br>
 
+> [!Note]
+> If you wish to use the admin account, instead of creating an account you may skip this section.
+
+By clicking the create account button, you will be taken to this page: <br>
+![Create account page](/page_images/Create_Account_Page.png) <br>
+There are certain criterias needed when creating a password/username, if they are not met or interfere with current accounts, you will have a warning pop up.
+
+
