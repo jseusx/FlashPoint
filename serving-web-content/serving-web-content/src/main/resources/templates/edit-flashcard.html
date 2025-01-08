@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Flashcard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Edit Flashcard</h2>
+
+    <form action="/edit-flashcard" method="post">
+    <input type="hidden" name="id" th:value="${id}">
+    <input type="hidden" name="subject" th:value="${subject}">
+    <div class="center-wrapper">
+        <!-- Container for the Topic and Description squares -->
+        <div class="edit-container">
+            <div class="edit-square">
+                <label for="topic">Topic:</label>
+                <input type="text" id="topic" name="topic" th:value="${topic}" class="edit-input">
+            </div>
+            <div class="edit-square">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" class="edit-input" th:text="${description}"></textarea>
+            </div>
+        </div>
+    </div>
+    <!-- Submit Button -->
+    <div class="submit-container">
+        <button type="submit" class="submit-button">Submit</button>
+    </div>
+</form>
+
+
+</body>
+</html>

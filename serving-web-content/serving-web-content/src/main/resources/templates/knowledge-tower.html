@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower to Heaven Game</title>
+    <link rel="stylesheet" href="tower.css">
+</head>
+<body>
+    <div id="gameContainer" th:attr="data-subject=${subject}">
+        <div id="textContainer">
+            <h1>Tower to Heaven</h1>
+            <div id="towerHeight">Tower height: 0 blocks</div>
+            <div id="xp">XP: <span id="xpDisplay" th:text="${xp}">0</span></div> <!-- Display current XP -->
+            <p id="rankDisplay">Rank: <span th:text="${rank}">INITIATE</span></p> <!-- Display current rank -->
+        </div>
+        <div id="blocksContainer"></div> <!-- Container for blocks -->
+    </div>
+
+    <div id="definition">Definition will appear here.</div> <!-- Definition above input -->
+    
+    <div id="userInputContainer">
+        <input type="text" id="userAnswer" placeholder="Type your answer here">
+        <button id="submitAnswerButton">Submit Answer</button>
+    </div>
+    
+    <div id="message"></div> <!-- Added message div for displaying feedback -->
+
+       <!-- Inline Script to Pass Dynamic Data -->
+    <script th:inline="javascript">
+        const subject = '[[${subject}]]'; // Pass the subject as a string
+        const serverFlashcardsKey = /*[[${flashcards}]]*/ []; // Pass flashcards as a JSON array
+        const currentXP = [[${xp}]]; // Pass XP to JS
+        const currentRank = '[[${rank}]]'; // Pass rank to JS
+
+        console.log("Loaded subject:", subject);
+        console.log("Loaded flashcards:", serverFlashcardsKey);
+        console.log("User XP:", currentXP);
+        console.log("User Rank:", currentRank);
+
+        // Update the XP and Rank on the page based on the profile data
+        document.getElementById("xp").innerText = `XP: ${currentXP}`;
+        document.getElementById("rankDisplay").innerText = `Rank: ${currentRank}`;
+
+        serverFlashcardsKey.forEach(flashcard => {
+            console.log(`Topic: ${flashcard.topic}, Description: ${flashcard.description}`);
+        });
+    </script>
+
+    <!-- External Script-->
+    <script src="tower.js"></script>
+</body>
+</html>

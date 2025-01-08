@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>FlashPoint</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <div class="taskbar-left">
+            <a href="/" class="taskbar-link">Home</a>
+        </div>
+        <div class="taskbar-right">
+            <!-- Login button -->
+            <a th:if="${!loggedIn}" href="/login" class="button login-button">Login</a>
+
+            <!-- Logout button -->
+            <a th:if="${loggedIn}" href="/logout" class="button login-button">Logout</a>
+        </div>
+    </div>
+
+    <!--Add subject button-->
+    <div th:if="${loggedIn}">
+        <div class="add-flashcard-wrapper">
+            <a href="/add-subject" class="add-flashcard-button">+ Add Subject</a>
+        </div>
+    </div>
+
+    <!-- Display message if logged in -->
+    <div th:if="${loggedIn}" class="logged-out-message">
+        <p>Welcome, <span th:text="${currentUser}"></span>! You are currently logged in.</p>
+    </div>
+
+    <!-- Display message if not logged in -->
+    <div th:if="${!loggedIn}" class="logged-out-message">
+        <p>Please log in to view your flashcards</p>
+    </div>
+
+    <div th:if="${subject_message}" class="edit-message">
+        <p th:text="${subject_message}"></p>
+    </div>
+
+    <div th:if="${loggedIn}" class="center-wrapper">
+        <!-- Container for topics -->
+        <div class="topics-container">
+            <!-- Loop through each subject and create a topic square -->
+            <div th:each="subject : ${subjects}" class="topic-wrapper">
+                <!-- Link to subject -->
+                <a th:href="@{/result(subject=${subject})}" class="topic-square">
+                    <div>
+                        <span th:text="${subject}">Sample Subject</span>
+                    </div>
+                </a>
+    
+                <!-- Button container (top-right) -->
+                <div class="button-container">
+                    <!-- Delete Button -->
+                    <form
+                        th:action="@{/delete-subject}"
+                        method="post"
+                        onsubmit="return confirm('Are you sure you want to delete this subject? All associated flashcards will be removed.');"
+                        class="delete-form">
+                        <input type="hidden" name="subject" th:value="${subject}" />
+                        <button type="submit" class="delete-button-subject">−</button>
+                    </form>
+            
+                    <!-- Edit Button -->
+                    <a th:href="@{/edit-subject(subject=${subject})}" class="edit-button-subject">✎</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

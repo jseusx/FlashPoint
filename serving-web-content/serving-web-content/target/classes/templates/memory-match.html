@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Term Definition Game</title>
+    <link rel="stylesheet" href="memory-match-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Term Definition Game for: <span th:text="${subject}"></span></h1>
+        <div id="definition-area">
+            <p id="definition-text" th:attr="data-subject=${subject}">Press "Start Game" to begin</p>
+        </div>
+        <input type="text" id="term-input" placeholder="Enter the term">
+        <button id="start-button">Start Game</button>
+        <button id="end-game-button">End Game</button>
+        <p id="timer">Time: 0s</p>
+        <p id="best-time">Best Time: Not set</p>
+        <p id="xp">XP: 0</p> <!-- ADDED AND CHANGED-->
+        <button id="reset-button">Reset Best Time</button>
+    </div>
+
+    <!-- Inline Script to Pass Dynamic Data -->
+    <script th:inline="javascript">
+        const subject = '[[${subject}]]'; // For string values
+        const terms = /*[[${terms}]]*/ [];    // Load terms as a JSON object
+
+        console.log("Loaded subject:", subject);
+        console.log("Loaded terms:", terms);
+
+        terms.forEach(term => {
+            console.log(`ID: ${term.id}, Topic: ${term.topic}, Description: ${term.description}`);
+        });
+    </script>
+
+    <!-- External Script -->
+    <script src="memory-match-script.js"></script>
+</body>
+</html>
